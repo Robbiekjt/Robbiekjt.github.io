@@ -4,13 +4,19 @@
 <title>Google Chart Example</title> 
 <script src="https://www.google.com/jsapi"></script> 
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
-<script src="jquery.csv-0.71.js"></script> <script> 
+<script src="jquery.csv-0.71.js"></script> 
+
+<script> 
+
 // wait till the DOM is loaded 
 $(function() { 
 // grab the CSV 
-$.get("kzn1993.csv", function(csvString) { 
+$.get("data\Campbell St 132_11kV FY2015.csv", function(csvString) { 
 // display the contents of the CSV 
-$("#chart").html(csvString); }); }); </script> 
+$("#chart").html(csvString); }); }); 
+
+</script> 
+
 </head>
  
 <body> 
