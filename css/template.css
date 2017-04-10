@@ -1,0 +1,23 @@
+#dashboard_div {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	background-color:white;
+	opacity:1;
+	}
+#control_div {
+	height: 10%;
+	position: absolute;
+	top: 70%;
+	width: 100%;
+	background-color:white;
+	opacity:1;
+	}
+#chart_year {
+	height: 70%;
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	background-color:white;
+	opacity:1;
+	}

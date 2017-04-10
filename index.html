@@ -1,26 +1,38 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-<title>Google Chart Example</title> 
+<title>Google Chart Example</title>
+<link rel="stylesheet" type="text/css" href="css/template.css" />
 <script src="https://www.google.com/jsapi"></script> 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
-<script src="jquery.csv-0.71.js"></script> 
-
-<script> 
-
-// wait till the DOM is loaded 
-$(function() { 
-// grab the CSV 
-$.get("data\Campbell St 132_11kV FY2015.csv", function(csvString) { 
-// display the contents of the CSV 
-$("#chart").html(csvString); }); }); 
-
-</script> 
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script> 
+<script src="js/jquery.csv.min.js"></script>
+<script src="js/graphing.js"></script> 
 
 </head>
  
-<body> 
-<div id="chart"> </div> 
+<body>
+
+<select id="sub" onchange="drawChart()">
+  <option value="1" selected="selected">Aberdeen 33_11kV FY2015.csv</option>
+  <option value="2">Aberdeen 66_11kV FY2015.csv</option>
+  <option value="3">Adamstown 132_11kV FY2015.csv</option>
+  <option value="4">Argenton 132_11kV FY2015.csv</option>
+  <option value="5">Arncliffe 33_11kV FY2015.csv</option>
+  <option value="6">Auburn 33_11kV FY2015.csv</option>
+  <option value="7">Avoca 66_11kV FY2015.csv</option>
+  <option value="8">Avondale 33_11kV FY2015.csv</option>
+  <option value="9">Baerami 33_11kV FY2015.csv</option>
+  <option value="10">Balgowlah North 132_11kV FY2015.csv</option>
+  <option value="11">Bankstown 132_11kV FY2015.csv</option>
+  <option value="12">Bass Hill 33_11kV FY2015.csv</option>
+  <option value="13">Beacon Hill 33_11kV FY2015.csv</option>
+</select>
+
+<div id="dashboard_div">
+  <div id="control_div"></div>
+  <div id="chart_year"></div>
+</div>
+<div id="test"></div>
 </body>
  
 </html>
