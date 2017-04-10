@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-
-        <title>Power Systems</title>
-	<link rel="stylesheet" type="text/css" href="css/template.css" />
-
-        <script src="js/raphael.js"></script>
-	<script src="js/main.js"></script>
-
-    </head>
-    <body>
-	<div id="headerbar"></div>
-        <div id="leftSLD"></div>
-	<div id="rightDetail"></div>
-    </body>
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Google Chart Example</title> 
+<script src="https://www.google.com/jsapi"></script> 
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
+<script src="jquery.csv-0.71.js"></script> <script> 
+// wait till the DOM is loaded 
+$(function() { 
+// grab the CSV 
+$.get("kzn1993.csv", function(csvString) { 
+// display the contents of the CSV 
+$("#chart").html(csvString); }); }); </script> 
+</head>
+ 
+<body> 
+<div id="chart"> </div> 
+</body>
+ 
 </html>
