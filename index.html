@@ -1,38 +1,36 @@
 <!DOCTYPE html> 
 <html> 
-<head> 
-<title>Google Chart Example</title>
-<link rel="stylesheet" type="text/css" href="css/template.css" />
-<script src="https://www.google.com/jsapi"></script> 
-<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script> 
-<script src="js/jquery.csv.min.js"></script>
-<script src="js/graphing.js"></script> 
 
-</head>
+	<head>
+	
+		<title>Google Chart Example</title>
+
+		<link rel="stylesheet" type="text/css" href="css/template.css" />
+		<script src="https://www.google.com/jsapi"></script> 
+		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script> 
+		<script src="js/jquery.csv.min.js"></script> 
+		<script src="js/graphing.js"></script>
+
+	</head>
  
-<body>
+	<body>
 
-<select id="sub" onchange="drawChart()">
-  <option value="1" selected="selected">Aberdeen 33_11kV FY2015.csv</option>
-  <option value="2">Aberdeen 66_11kV FY2015.csv</option>
-  <option value="3">Adamstown 132_11kV FY2015.csv</option>
-  <option value="4">Argenton 132_11kV FY2015.csv</option>
-  <option value="5">Arncliffe 33_11kV FY2015.csv</option>
-  <option value="6">Auburn 33_11kV FY2015.csv</option>
-  <option value="7">Avoca 66_11kV FY2015.csv</option>
-  <option value="8">Avondale 33_11kV FY2015.csv</option>
-  <option value="9">Baerami 33_11kV FY2015.csv</option>
-  <option value="10">Balgowlah North 132_11kV FY2015.csv</option>
-  <option value="11">Bankstown 132_11kV FY2015.csv</option>
-  <option value="12">Bass Hill 33_11kV FY2015.csv</option>
-  <option value="13">Beacon Hill 33_11kV FY2015.csv</option>
-</select>
+		<select id="year" onchange="populateSelect()">
+			<option value="FY2015" selected>FY2015</option>
+			<option value="FY2014">FY2014</option>
+			<option value="FY2013">FY2013</option>
+			<option value="FY2012">FY2012</option>
+			<option value="FY2011">FY2011</option>
+			<option value="FY2010">FY2010</option>
+		</select>
+		<select id="sub" onchange="drawChart()"></select>
 
-<div id="dashboard_div">
-  <div id="control_div"></div>
-  <div id="chart_year"></div>
-</div>
-<div id="test"></div>
-</body>
+		<div id="dashboard_div">
+		  <div id="control_div"></div>
+		  <div id="chart_year"></div>
+		</div>
+		<div id="test"></div>
+
+	</body>
  
 </html>

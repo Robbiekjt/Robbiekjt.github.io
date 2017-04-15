@@ -1,9 +1,25 @@
-// populate the substation select box
-var arraySubstationFiles = $.csv.toArrays("data/substation_files.csv", {onParseValue: $.csv.hooks.castToScalar});
 
-var select = document.getElementById("sub");
-for (var i = 0; i < arraySubstationFiles.length; i++) {
-	select.options[select.options.length] = new Option(arraySubstationFiles[i], i);
+document.addEventListener("DOMContentLoaded", populateSelect);
+
+function populateSelect() {
+	// get selected year
+	var e = document.getElementById("year");
+	var strSelectedYear = e.options[e.selectedIndex].value;
+	
+	// populate the substation select box
+	$.get("data/substation_files.csv", function(csvString) {
+		var arraySubstationFiles = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+		
+		var select = document.getElementById("sub");
+		// remove options before populating
+		select.innerHTML = "";
+		
+		for (var i = 0; i < arraySubstationFiles.length; i++) {
+			if (arraySubstationFiles[i][2] === strSelectedYear) {
+				select.options[select.options.length] = new Option(arraySubstationFiles[i][1], arraySubstationFiles[i][0]);
+			}
+		}
+	});
 }
 
 // load the visualization library from Google and set a listener 
@@ -21,7 +37,7 @@ function subChange(control) {
 function drawChart() { 
 	// grab the CSV
 	var e = document.getElementById("sub");
-	var strSelectedSub = e.options[e.selectedIndex].text;
+	var strSelectedSub = e.options[e.selectedIndex].value;
 
 	$.get("data/" + strSelectedSub, function(csvString) {
 
