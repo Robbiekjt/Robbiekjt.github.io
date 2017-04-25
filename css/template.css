@@ -1,23 +1,32 @@
 #dashboard_div {
-	height: 100%;
-	position: absolute;
+	height: 80%;
+	position: relative;
 	width: 100%;
 	background-color:white;
 	opacity:1;
 	}
 #control_div {
 	height: 10%;
-	position: absolute;
-	top: 70%;
 	width: 100%;
+	position: relative;
 	background-color:white;
 	opacity:1;
 	}
 #chart_year {
-	height: 70%;
-	position: absolute;
-	top: 0%;
+	height: 90%;
 	width: 100%;
+	position: relative;
 	background-color:white;
 	opacity:1;
 	}
+
+html, body
+{
+    height: 100%;
+}
+.container-fluid {
+    height: 100%;
+}
+.row {
+    height: 100%;
+}
