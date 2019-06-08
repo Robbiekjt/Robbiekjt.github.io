@@ -1,13 +1,13 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 
 	<head>
-	
+
 		<title>Google Chart Example</title>
 
-		<script src="https://www.google.com/jsapi"></script> 
-		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script> 
-		<script src="js/jquery.csv.min.js"></script> 
+		<script src="https://www.google.com/jsapi"></script>
+		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery.csv.min.js"></script>
 		<script src="js/graphing.js"></script>
 
 		<!-- Bootstrap core CSS -->
@@ -19,9 +19,9 @@
 		<!-- Custom styles for this template -->
 		<link href="css/dashboard.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/template.css" />
-		
+
 	</head>
- 
+
 	<body>
 
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -74,9 +74,13 @@
 				<div class="col-sm-offset-3 col-md-offset-2 main">
 					<h1 class="page-header">Dashboard</h1>
 
-			  
+
 					<select id="year" onchange="populateSelect()">
-						<option value="FY2015" selected>FY2015</option>
+						<option value="FY2019">FY2019</option>
+						<option value="FY2018" selected>FY2018</option>
+						<option value="FY2017">FY2017</option>
+						<option value="FY2016">FY2016</option>
+						<option value="FY2015">FY2015</option>
 						<option value="FY2014">FY2014</option>
 						<option value="FY2013">FY2013</option>
 						<option value="FY2012">FY2012</option>
@@ -84,14 +88,14 @@
 						<option value="FY2010">FY2010</option>
 					</select>
 					<select id="sub" onchange="drawChart()"></select>
-			  
+
 					<div id="dashboard_div">
 						<div id="chart_year"></div>
 						<div id="control_div"></div>
 					</div>
-			  
+
 				</div>
-					
+
 			</div>
 		</div>
 
@@ -101,7 +105,7 @@
 		<!--<script src="js/bootstrap.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<!--<script src="js/ie10-viewport-bug-workaround.js"></script>-->
-		
+
 	</body>
- 
+
 </html>
